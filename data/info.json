@@ -1,0 +1,29 @@
+{
+  "_catatan": "Info kunjungan (cadangan statis). Di fase 5, nilai ini bisa diperbarui staf lewat tab Info di Google Sheet. Teks dua bahasa ditulis {\"id\": ..., \"en\": ...}. String kosong = disembunyikan di situs.",
+  "_verifikasi": "Alamat, jam, dan jarak diambil dari konsep tim magang (Output Produk Magang). Semua harus dikonfirmasi ke pengelola PIGGI.",
+  "alamat": {
+    "id": "Jl. Gajah Mada, Lingkungan Cuking, Kel. Mojopanggung, Kec. Giri, Kabupaten Banyuwangi, Jawa Timur [VERIFIKASI]",
+    "en": "Jl. Gajah Mada, Lingkungan Cuking, Mojopanggung, Giri, Banyuwangi Regency, East Java, Indonesia [VERIFIKASI]"
+  },
+  "jarak": {
+    "id": "Sekitar 3 km atau kurang lebih 10 menit berkendara dari pusat Kota Banyuwangi. [VERIFIKASI]",
+    "en": "About 3 km, or roughly a 10-minute drive, from Banyuwangi city center. [VERIFIKASI]"
+  },
+  "jam": [
+    {
+      "hari": { "id": "Senin–Jumat", "en": "Monday–Friday" },
+      "waktu": { "id": "08.00–16.00 WIB [VERIFIKASI]", "en": "8:00 am–4:00 pm (WIB, UTC+7) [VERIFIKASI]" }
+    },
+    {
+      "hari": { "id": "Sabtu, Minggu & libur nasional", "en": "Saturday, Sunday & public holidays" },
+      "waktu": { "id": "[ISI DARI PIGGI]", "en": "[ISI DARI PIGGI]" }
+    }
+  ],
+  "telepon": "",
+  "email": "",
+  "whatsapp": "",
+  "instagram": "",
+  "mapsQuery": "Pusat Informasi Geologi Geopark Ijen, Jl. Gajah Mada, Banyuwangi",
+  "youtubeBeranda": "",
+  "instagramPosts": []
+}

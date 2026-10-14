@@ -1,0 +1,17 @@
+{
+  "_catatan": "Agenda cadangan (dipakai bila tab Agenda di Sheet kosong/tak terjangkau, fase 5). Tanggal format yyyy-MM-dd. Item di bawah adalah CONTOH, bukan acara sungguhan.",
+  "acara": [
+    {
+      "tanggal": "2026-11-20",
+      "judul": { "id": "Contoh agenda: Kunjungan edukasi terjadwal [ISI DARI PIGGI]", "en": "Sample event: Scheduled learning visit [ISI DARI PIGGI]" },
+      "deskripsi": { "id": "Ini contoh tampilan agenda. Staf mengganti isinya lewat tab Agenda di Google Sheet.", "en": "This is a sample event listing. Staff replace it through the Agenda tab in Google Sheets." },
+      "tautan": ""
+    },
+    {
+      "tanggal": "2026-12-05",
+      "judul": { "id": "Contoh agenda: Kelas geologi untuk keluarga [ISI DARI PIGGI]", "en": "Sample event: Family geology class [ISI DARI PIGGI]" },
+      "deskripsi": { "id": "Contoh kedua. Hapus bila agenda asli sudah tersedia.", "en": "Second sample. Remove once real events are available." },
+      "tautan": ""
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="{{site.lang}}" data-base="{{site.base}}" data-wa="{{data.info.whatsapp}}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{page.description}}">
+    <meta name="theme-color" content="{{site.themeColor}}">
+    {{html:page.head}}
+    <link rel="icon" href="{{asset:assets/icons/favicon.svg}}" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600..800&display=swap">
+    <link rel="stylesheet" href="{{asset:css/tokens.css}}">
+    <link rel="stylesheet" href="{{asset:css/style.css}}">
+    <script type="module" src="{{asset:js/main.js}}"></script>
+  </head>
+  <body data-page="{{page.key}}">
+    <a class="skip-link" href="#isi">{{nav.lewati}}</a>
+
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="{{route:beranda}}" aria-label="{{nav.keBeranda}}">
+          <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+            <path class="mark-gunung" d="M1 29 L11 11 L14 15 L18 15 L21 11 L31 29 Z"/>
+            <path class="mark-api" d="M16 2 C19 6 20 9 18 12 C18 10 17 9 16 8 C15 10 13 11 14 13 C11 10 12 6 16 2 Z"/>
+          </svg>
+          <span class="brand__name">{{meta.situs.nama}}</span>
+        </a>
+
+        <nav class="nav" id="menu-utama" aria-label="{{nav.aria}}" data-open="false">
+          <ul class="nav__list" role="list">
+            {{#each page.navItems}}
+            <li><a class="nav__link" href="{{this.href}}"{{#if this.current}} aria-current="page"{{/if}}><span class="nav__panjang">{{this.label}}</span><span class="nav__pendek">{{this.pendek}}</span></a></li>
+            {{/each}}
+          </ul>
+        </nav>
+
+        {{#if page.hasAlt}}
+        <a class="lang-switch" href="{{page.altHref}}" hreflang="{{site.altLang}}" data-lang-switch="{{site.altLang}}" aria-label="{{bahasa.lainAria}}">{{bahasa.lainKode}}</a>
+        {{/if}}
+
+        <a class="btn btn--utama btn--kecil" href="{{route:kunjungi#reservasi}}" data-track="klik_reservasi">{{cta.reservasi}}</a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-utama" data-label-buka="{{nav.buka}}" data-label-tutup="{{nav.tutup}}">
+          <span class="visually-hidden" data-nav-label>{{nav.buka}}</span>
+          <svg class="nav-toggle__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <line class="garis-1" x1="4" y1="6" x2="20" y2="6"/>
+            <line class="garis-2" x1="4" y1="12" x2="20" y2="12"/>
+            <line class="garis-3" x1="4" y1="18" x2="20" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main id="isi" tabindex="-1">
+{{html:page.body}}
+    </main>
+
+    {{#if page.cta}}
+    <section class="cta-band" aria-labelledby="cta-judul">
+      <div class="container cta-band__inner">
+        <div>
+          <h2 class="cta-band__title" id="cta-judul">{{page.cta.judul}}</h2>
+          <p class="cta-band__text">{{page.cta.teks}}</p>
+        </div>
+        <div class="cta-band__actions">
+          {{#each page.cta.tombol}}
+          <a class="btn btn--{{this.gaya}}" href="{{url:this.route}}"{{#if this.track}} data-track="{{this.track}}"{{/if}}>{{this.label}}</a>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+    {{/if}}
+
+    <footer class="site-footer">
+      <div class="strata" aria-hidden="true"></div>
+      <div class="container site-footer__grid">
+        <div>
+          <p class="site-footer__brand">{{meta.situs.namaPanjang}}</p>
+          <p>{{footer.tagline}}</p>
+          <p>{{meta.situs.lokasiSingkat}}</p>
+        </div>
+        <nav aria-labelledby="footer-jelajah">
+          <h2 class="site-footer__heading" id="footer-jelajah">{{footer.jelajah}}</h2>
+          <ul class="site-footer__links" role="list">
+            {{#each page.navItems}}
+            <li><a href="{{this.href}}">{{this.label}}</a></li>
+            {{/each}}
+          </ul>
+        </nav>
+        <div>
+          <h2 class="site-footer__heading">{{footer.kontakJudul}}</h2>
+          <p>{{footer.kontakIsi}}</p>
+        </div>
+      </div>
+      <div class="container site-footer__bottom">
+        <p>&copy; {{site.tahun}} {{footer.hak}}</p>
+        <p>{{footer.catatanData}}</p>
+      </div>
+    </footer>
+
+    <a class="wa-float" href="#" data-wa hidden target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.4-.3Z"/>
+      </svg>
+      <span class="visually-hidden">{{cta.wa}}</span>
+    </a>
+  </body>
+</html>

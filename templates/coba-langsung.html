@@ -1,0 +1,68 @@
+<section class="page-intro">
+  <div class="container">
+    <p class="eyebrow">{{halaman.coba-langsung.intro.eyebrow}}</p>
+    <h1>{{halaman.coba-langsung.intro.judul}}</h1>
+    <p class="lead">{{halaman.coba-langsung.intro.lead}}</p>
+  </div>
+</section>
+
+<section class="section section--rapat" aria-labelledby="stasiun-judul">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">{{halaman.coba-langsung.stasiun.eyebrow}}</p>
+      <h2 id="stasiun-judul">{{halaman.coba-langsung.stasiun.judul}}</h2>
+    </header>
+    <ul class="grid-3" role="list">
+      {{#each halaman.coba-langsung.stasiun.item}}
+      <li class="kartu-teaser">
+        <div class="kartu-teaser__visual" aria-hidden="true">
+          <svg><use href="{{asset:assets/icons/ikon.svg}}#ikon-{{this.ikon}}"/></svg>
+          <span class="kartu-teaser__tanya">?</span>
+        </div>
+        <div class="kartu-teaser__isi">
+          <h3>{{this.judul}}</h3>
+          <p>{{this.teks}}</p>
+          <p class="kartu-teaser__ajakan"><span class="lencana">{{umum.hanyaDiPiggi}}</span> {{this.ajakan}}</p>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--permukaan" aria-labelledby="temukan-judul">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">{{halaman.coba-langsung.temukan.eyebrow}}</p>
+      <h2 id="temukan-judul">{{halaman.coba-langsung.temukan.judul}}</h2>
+    </header>
+    <ul class="grid-kartu" role="list">
+      {{#each halaman.coba-langsung.temukan.item}}
+      <li class="kartu-ikon">
+        <span class="kartu-ikon__ikon" aria-hidden="true"><svg><use href="{{asset:assets/icons/ikon.svg}}#ikon-{{this.ikon}}"/></svg></span>
+        <h3 class="kartu-ikon__judul">{{this.judul}}</h3>
+        <p class="kartu-ikon__teks">{{this.teks}}</p>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>
+
+<section class="section section--gelap" aria-labelledby="game-judul">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow eyebrow--aksen">{{halaman.coba-langsung.game.eyebrow}}</p>
+      <h2 id="game-judul">{{halaman.coba-langsung.game.judul}}</h2>
+      <p class="lead teks-redup">{{halaman.coba-langsung.game.lead}}</p>
+    </header>
+    <ul class="grid-3" role="list">
+      {{#each halaman.coba-langsung.game.item}}
+      <li class="kartu-game">
+        <span class="kartu-game__ikon" aria-hidden="true"><svg><use href="{{asset:assets/icons/ikon.svg}}#ikon-{{this.ikon}}"/></svg></span>
+        <h3>{{this.judul}}</h3>
+        <p>{{this.teks}}</p>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

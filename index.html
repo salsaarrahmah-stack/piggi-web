@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PIGGI · Pusat Informasi Geologi Geopark Ijen, Banyuwangi</title>
+    <meta name="description" content="Pusat informasi dan wisata edukasi geologi Geopark Ijen di Banyuwangi. Cek kuota dan pesan slot kunjungan ke PIGGI secara online.">
+    <link rel="alternate" hreflang="id" href="https://piggi01.netlify.app/id/">
+    <link rel="alternate" hreflang="en" href="https://piggi01.netlify.app/en/">
+    <link rel="alternate" hreflang="x-default" href="https://piggi01.netlify.app/">
+    <link rel="stylesheet" href="/css/tokens.css?v=f6d70007">
+    <link rel="stylesheet" href="/css/style.css?v=3c2bfc1e">
+    <script>
+      (function () {
+        var base = "/";
+        var saved = null;
+        try { saved = localStorage.getItem('piggi.lang'); } catch (e) {}
+        var list = navigator.languages || [navigator.language || ''];
+        var pick = saved === 'id' || saved === 'en' ? saved
+          : list.some(function (l) { return /^(id|ms)\b/i.test(l); }) ? 'id' : 'en';
+        location.replace(base + pick + '/');
+      })();
+    </script>
+  </head>
+  <body>
+    <main class="container section pilih-bahasa">
+      <h1>PIGGI</h1>
+      <p>Pilih bahasa / Choose a language</p>
+      <p class="pilih-bahasa__aksi">
+        <a class="btn btn--utama" href="/id/" hreflang="id">Bahasa Indonesia</a>
+        <a class="btn btn--kedua" href="/en/" hreflang="en" lang="en">English</a>
+      </p>
+    </main>
+  </body>
+</html>

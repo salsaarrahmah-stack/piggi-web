@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://piggi01.netlify.app/sitemap.xml

@@ -1,0 +1,62 @@
+<section class="page-intro">
+  <div class="container">
+    <p class="eyebrow">{{halaman.untuk-sekolah.intro.eyebrow}}</p>
+    <h1>{{halaman.untuk-sekolah.intro.judul}}</h1>
+    <p class="lead">{{halaman.untuk-sekolah.intro.lead}}</p>
+  </div>
+</section>
+
+<section class="section section--rapat" aria-labelledby="paket-judul">
+  <div class="container">
+    <h2 id="paket-judul">{{halaman.untuk-sekolah.paket.judul}}</h2>
+    <div class="tab-jenjang" data-tabs>
+      <div class="tab-jenjang__daftar" role="tablist" aria-label="{{halaman.untuk-sekolah.paket.tabLabel}}" data-tablist hidden>
+        {{#each halaman.untuk-sekolah.paket.item}}
+        <button class="tab-pil tab-pil--{{this.kode}}" type="button" role="tab" id="tab-{{this.kode}}" aria-controls="panel-{{this.kode}}">{{this.tab}}</button>
+        {{/each}}
+      </div>
+      {{#each halaman.untuk-sekolah.paket.item}}
+      <section class="panel-jenjang panel-jenjang--{{this.kode}}" role="tabpanel" id="panel-{{this.kode}}" aria-labelledby="tab-{{this.kode}}" tabindex="0">
+        <div class="panel-jenjang__kepala">
+          <p class="lencana lencana--{{this.kode}}">{{this.level}}</p>
+          <h3>{{this.judul}}</h3>
+          <p>{{this.untuk}}</p>
+          <p class="teks-kecil">{{this.durasi}}</p>
+        </div>
+        <div class="panel-jenjang__isi">
+          <div>
+            <h4>{{halaman.untuk-sekolah.paket.aktivitasJudul}}</h4>
+            <ul class="daftar-centang">{{#each this.aktivitas}}<li>{{this}}</li>{{/each}}</ul>
+          </div>
+          <div>
+            <h4>{{halaman.untuk-sekolah.paket.pelajaranJudul}}</h4>
+            <dl class="daftar-mapel">
+              {{#each this.pelajaran}}<div><dt>{{this.mapel}}</dt><dd>{{this.topik}}</dd></div>{{/each}}
+            </dl>
+          </div>
+        </div>
+        <a class="btn btn--kedua btn--kecil" href="{{aset:this.pdf}}" download>
+          <svg class="btn__ikon" aria-hidden="true"><use href="{{asset:assets/icons/ikon.svg}}#ikon-unduh"/></svg>{{this.pdfLabel}}
+        </a>
+      </section>
+      {{/each}}
+    </div>
+    <p class="catatan-verifikasi">{{halaman.untuk-sekolah.paket.pelajaranCatatan}}</p>
+  </div>
+</section>
+
+<section class="section section--permukaan" aria-labelledby="rombongan-judul">
+  <div class="container grid-2">
+    <div class="card">
+      <h2 class="judul-kartu" id="rombongan-judul">{{halaman.untuk-sekolah.rombongan.judul}}</h2>
+      <ul class="daftar-centang">
+        {{#each halaman.untuk-sekolah.rombongan.item}}<li>{{this}}</li>{{/each}}
+      </ul>
+    </div>
+    <div class="card card--gelap">
+      <p class="eyebrow eyebrow--aksen">{{halaman.untuk-sekolah.escape.eyebrow}}</p>
+      <h2 class="judul-kartu">{{halaman.untuk-sekolah.escape.judul}}</h2>
+      <p class="teks-redup">{{halaman.untuk-sekolah.escape.teks}}</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,170 @@
+/*
+ * tokens.css — SATU-SATUNYA tempat mengganti desain (warna, font, ukuran, jarak, sudut, bayangan).
+ * Palet & font di bawah ini SEMENTARA (placeholder), terinspirasi Ijen:
+ * basal gelap, biru api, kuning belerang, hijau-toska danau kawah.
+ * Ganti nilai di sini → seluruh situs ikut berubah. style.css hanya memakai var(--...).
+ */
+:root {
+  /* ===== Palet dasar ===== */
+  --c-basal-950: #0f1115;
+  --c-basal-900: #171a21;
+  --c-basal-800: #232733;
+  --c-basal-700: #333846;
+  --c-basal-500: #5b6273;
+  --c-abu-300: #cfc9bc;
+  --c-abu-200: #e2ddd2;
+  --c-abu-100: #efebe2;
+  --c-abu-50: #f8f6f1;
+  --c-putih: #ffffff;
+
+  --c-api-800: #163fae;
+  --c-api-700: #1d4fd1;
+  --c-api-400: #5b8cff;
+  --c-api-300: #8db3ff;
+
+  --c-belerang-600: #d9a700;
+  --c-belerang-500: #f2c230;
+  --c-belerang-300: #f8dd7a;
+
+  --c-kawah-500: #1f9e90;
+  --c-lava-600: #c43f22;
+
+  /* Lapisan batuan (strata) untuk ornamen pembatas */
+  --strata-1: #6b4f3a;
+  --strata-2: #a38a6b;
+  --strata-3: #3f3a36;
+  --strata-4: #c9b28a;
+  --strata-5: #8a7a6a;
+
+  /* ===== Warna semantik (dipakai style.css) ===== */
+  --color-bg: var(--c-abu-50);
+  --color-surface: var(--c-putih);
+  --color-surface-2: var(--c-abu-100);
+  --color-border: var(--c-abu-200);
+  --color-border-strong: var(--c-abu-300);
+  --color-text: var(--c-basal-950);
+  --color-text-muted: #4a4f5c;
+  --color-link: var(--c-api-700);
+  --color-link-hover: var(--c-api-800);
+
+  --color-primary: var(--c-api-700);
+  --color-primary-hover: var(--c-api-800);
+  --color-on-primary: var(--c-putih);
+
+  --color-accent: var(--c-belerang-500);
+  --color-accent-hover: var(--c-belerang-300);
+  --color-on-accent: var(--c-basal-950);
+
+  --color-dark-bg: var(--c-basal-900);
+  --color-dark-bg-2: var(--c-basal-800);
+  --color-on-dark: #f3f1ec;
+  --color-on-dark-muted: #bfc2cb;
+  --color-glow-api: rgba(91, 140, 255, 0.45);
+  --color-glow-belerang: rgba(242, 194, 48, 0.22);
+
+  --color-header-bg: var(--c-abu-50);
+  --color-focus: var(--c-api-700);
+  --color-focus-on-dark: var(--c-belerang-500);
+
+  --color-whatsapp: #0f7a40;
+  --color-on-whatsapp: var(--c-putih);
+
+  /* Status kuota (dipakai kalender, fase 3) — selalu disertai ikon/teks */
+  --color-tersedia: #1d7a43;
+  --color-hampir: #8a5a00;
+  --color-penuh: #b3261e;
+  --color-tutup: #5b6273;
+
+  /* Aksen tiga level pengunjung */
+  --level-penjelajah: #1d7a43;
+  --level-peneliti: #8a5a00;
+  --level-geolog: #b3261e;
+  --level-penjelajah-soft: #e3f3e9;
+  --level-peneliti-soft: #fbf0d4;
+  --level-geolog-soft: #fbe4e1;
+
+  /* ===== Tipografi (maks. 2 keluarga) ===== */
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Atkinson Hyperlegible', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --fs-200: 0.8125rem;
+  --fs-300: 0.9375rem;
+  --fs-400: 1.0625rem;
+  --fs-500: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem);
+  --fs-600: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --fs-700: clamp(1.9rem, 1.5rem + 2vw, 2.9rem);
+  --fs-800: clamp(2.4rem, 1.6rem + 4.2vw, 4.6rem);
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.3;
+  --lh-body: 1.6;
+
+  /* ===== Jarak, ukuran, sudut, bayangan ===== */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+
+  --container: 72rem;
+  --header-h: 4rem;
+  --tap: 2.75rem; /* 44px area sentuh minimum */
+
+  --r-sm: 0.375rem;
+  --r-md: 0.75rem;
+  --r-lg: 1.25rem;
+  --r-pill: 999px;
+
+  --sh-1: 0 1px 2px rgba(15, 17, 21, 0.08), 0 1px 1px rgba(15, 17, 21, 0.04);
+  --sh-2: 0 8px 24px rgba(15, 17, 21, 0.12);
+  --sh-3: 0 16px 40px rgba(15, 17, 21, 0.22);
+
+  --dur-1: 150ms;
+  --dur-2: 280ms;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* ===== Tema gelap mengikuti pengaturan perangkat ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: var(--c-basal-950);
+    --color-surface: var(--c-basal-900);
+    --color-surface-2: var(--c-basal-800);
+    --color-border: var(--c-basal-700);
+    --color-border-strong: var(--c-basal-500);
+    --color-text: #ece9e2;
+    --color-text-muted: #b4b8c2;
+    --color-link: var(--c-api-300);
+    --color-link-hover: #b5ceff;
+
+    --color-primary: var(--c-api-300);
+    --color-primary-hover: #b5ceff;
+    --color-on-primary: var(--c-basal-950);
+
+    --color-dark-bg: #0b0c10;
+    --color-dark-bg-2: var(--c-basal-900);
+
+    --color-header-bg: var(--c-basal-950);
+    --color-focus: var(--c-belerang-500);
+
+    --color-tersedia: #5fd08f;
+    --color-hampir: #f2c230;
+    --color-penuh: #ff8a80;
+    --color-tutup: #9aa0ad;
+
+    --level-penjelajah-soft: #15301f;
+    --level-peneliti-soft: #33280a;
+    --level-geolog-soft: #3a1714;
+
+    --sh-1: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --sh-2: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+    color-scheme: dark;
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "_catatan": "Pengaturan situs untuk build.js. basePath: '/' untuk lokal/Netlify, '/nama-repo/' untuk GitHub Pages. siteUrl: alamat asli situs (tanpa garis miring di akhir).",
+  "basePath": "/",
+  "siteUrl": "https://piggi01.netlify.app",
+  "defaultLang": "id",
+  "themeColor": "#171a21"
+}

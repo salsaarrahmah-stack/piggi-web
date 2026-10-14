@@ -1,0 +1,87 @@
+<section class="page-intro">
+  <div class="container">
+    <p class="eyebrow">{{halaman.tentang.intro.eyebrow}}</p>
+    <h1>{{halaman.tentang.intro.judul}}</h1>
+    <p class="lead">{{halaman.tentang.intro.lead}}</p>
+  </div>
+</section>
+
+<section class="section section--rapat" aria-labelledby="apa-judul">
+  <div class="container dua-kolom">
+    <div class="prosa">
+      <h2 id="apa-judul">{{halaman.tentang.apa.judul}}</h2>
+      {{#each halaman.tentang.apa.paragraf}}<p>{{this}}</p>{{/each}}
+      <h2 id="latar-judul">{{halaman.tentang.latar.judul}}</h2>
+      {{#each halaman.tentang.latar.paragraf}}<p>{{this}}</p>{{/each}}
+    </div>
+    <aside class="kartu-fakta" aria-labelledby="fakta-judul">
+      <h2 class="kartu-fakta__judul" id="fakta-judul">{{halaman.tentang.latar.faktaJudul}}</h2>
+      <dl class="kartu-fakta__daftar">
+        {{#each halaman.tentang.latar.fakta}}
+        <div class="kartu-fakta__item">
+          <dt>{{this.label}}</dt>
+          <dd>{{this.angka}}</dd>
+        </div>
+        {{/each}}
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="section section--permukaan" aria-labelledby="sejarah-judul">
+  <div class="container">
+    <header class="section-head">
+      <h2 id="sejarah-judul">{{halaman.tentang.sejarah.judul}}</h2>
+      <p class="catatan-verifikasi">{{halaman.tentang.sejarah.lead}}</p>
+    </header>
+    <ol class="timeline" role="list">
+      {{#each halaman.tentang.sejarah.item}}
+      <li class="timeline__item">
+        <p class="timeline__tanggal">{{this.tanggal}}</p>
+        <h3 class="timeline__judul">{{this.judul}}</h3>
+        <p class="timeline__teks">{{this.teks}}</p>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="fungsi-judul">
+  <div class="container">
+    <h2 id="fungsi-judul">{{halaman.tentang.fungsi.judul}}</h2>
+    <div class="grid-2">
+      {{#each halaman.tentang.fungsi.item}}
+      <article class="card">
+        <h3>{{this.judul}}</h3>
+        <p>{{this.teks}}</p>
+      </article>
+      {{/each}}
+    </div>
+
+    <h2 class="jarak-atas" id="tujuan-judul">{{halaman.tentang.tujuan.judul}}</h2>
+    <ol class="daftar-bernomor" role="list">
+      {{#each halaman.tentang.tujuan.item}}
+      <li class="daftar-bernomor__item">
+        <span class="daftar-bernomor__nomor" aria-hidden="true">{{@nomor}}</span>
+        <div>
+          <h3>{{this.judul}}</h3>
+          <p>{{this.teks}}</p>
+        </div>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+</section>
+
+<section class="section section--gelap" aria-labelledby="bangunan-judul">
+  <div class="container dua-kolom dua-kolom--tengah">
+    <div>
+      <p class="eyebrow eyebrow--aksen">{{halaman.tentang.bangunan.eyebrow}}</p>
+      <h2 id="bangunan-judul">{{halaman.tentang.bangunan.judul}}</h2>
+      {{#each halaman.tentang.bangunan.paragraf}}<p class="teks-redup">{{this}}</p>{{/each}}
+    </div>
+    <figure class="ilustrasi-pakis">
+      <img src="{{asset:assets/images/galeri/contoh-3.svg}}" alt="{{halaman.tentang.bangunan.gambarAlt}}" width="800" height="600" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>

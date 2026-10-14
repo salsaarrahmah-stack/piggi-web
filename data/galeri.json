@@ -1,0 +1,41 @@
+{
+  "_catatan": "Galeri cadangan (dipakai bila tab Galeri di Sheet kosong/tak terjangkau, fase 5). File gambar di assets/images/galeri/. Gambar contoh-*.svg hanya placeholder: ganti dengan foto resmi PIGGI yang sudah ada izin pakainya.",
+  "foto": [
+    {
+      "file": "assets/images/galeri/contoh-1.svg",
+      "kategori": { "id": "Kunjungan", "en": "Visits" },
+      "alt": { "id": "Ilustrasi placeholder: rombongan pengunjung di lobi PIGGI", "en": "Placeholder illustration: a visitor group in the PIGGI lobby" },
+      "keterangan": { "id": "Contoh foto kunjungan. [ISI DARI PIGGI]", "en": "Sample visit photo. [ISI DARI PIGGI]" }
+    },
+    {
+      "file": "assets/images/galeri/contoh-2.svg",
+      "kategori": { "id": "Edukasi", "en": "Learning" },
+      "alt": { "id": "Ilustrasi placeholder: pelajar mengamati sampel lewat mikroskop", "en": "Placeholder illustration: a student looking through a microscope" },
+      "keterangan": { "id": "Contoh foto pengamatan mikroskop. [ISI DARI PIGGI]", "en": "Sample microscope session photo. [ISI DARI PIGGI]" }
+    },
+    {
+      "file": "assets/images/galeri/contoh-3.svg",
+      "kategori": { "id": "Ruang & koleksi", "en": "Spaces & collection" },
+      "alt": { "id": "Ilustrasi placeholder: tangga melingkar berbentuk tunas pakis dilihat dari atas", "en": "Placeholder illustration: the spiral staircase seen from above, shaped like a fern bud" },
+      "keterangan": { "id": "Contoh foto tangga pakis. [ISI DARI PIGGI]", "en": "Sample photo of the fern staircase. [ISI DARI PIGGI]" }
+    },
+    {
+      "file": "assets/images/galeri/contoh-4.svg",
+      "kategori": { "id": "Kegiatan pelajar & mahasiswa", "en": "Student activities" },
+      "alt": { "id": "Ilustrasi placeholder: kelompok mahasiswa berdiskusi di depan peta proyeksi", "en": "Placeholder illustration: university students discussing in front of a projection map" },
+      "keterangan": { "id": "Contoh foto kegiatan mahasiswa. [ISI DARI PIGGI]", "en": "Sample student activity photo. [ISI DARI PIGGI]" }
+    },
+    {
+      "file": "assets/images/galeri/contoh-5.svg",
+      "kategori": { "id": "Event di PIGGI", "en": "Events at PIGGI" },
+      "alt": { "id": "Ilustrasi placeholder: acara di ruang mini theatre", "en": "Placeholder illustration: an event in the mini theatre" },
+      "keterangan": { "id": "Contoh foto event. [ISI DARI PIGGI]", "en": "Sample event photo. [ISI DARI PIGGI]" }
+    },
+    {
+      "file": "assets/images/galeri/contoh-6.svg",
+      "kategori": { "id": "Penelitian", "en": "Research" },
+      "alt": { "id": "Ilustrasi placeholder: sampel batuan di meja pengamatan", "en": "Placeholder illustration: rock samples on an observation table" },
+      "keterangan": { "id": "Contoh foto penelitian. [ISI DARI PIGGI]", "en": "Sample research photo. [ISI DARI PIGGI]" }
+    }
+  ]
+}

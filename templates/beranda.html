@@ -1,0 +1,84 @@
+<section class="hero" aria-labelledby="hero-judul">
+  <div class="container hero__inner">
+    <div>
+      <p class="eyebrow hero__eyebrow">{{halaman.beranda.hero.eyebrow}}</p>
+      <h1 class="hero__title" id="hero-judul">{{halaman.beranda.hero.judul}}</h1>
+      <p class="hero__lead">{{halaman.beranda.hero.lead}}</p>
+      <div class="hero__actions">
+        <a class="btn btn--aksen" href="{{route:kunjungi#reservasi}}" data-track="klik_reservasi">{{halaman.beranda.hero.tombolUtama}}</a>
+        <a class="btn btn--kedua btn--terang" href="{{route:jelajahi}}">{{halaman.beranda.hero.tombolKedua}}</a>
+      </div>
+    </div>
+    <svg class="hero__art" viewBox="0 0 320 220" aria-hidden="true" focusable="false">
+      <circle class="art-asap" cx="236" cy="54" r="34"/>
+      <circle class="art-asap" cx="262" cy="34" r="20"/>
+      <path class="art-gunung" d="M0 220 L112 70 L134 92 L186 92 L208 70 L320 220 Z"/>
+      <ellipse class="art-kawah" cx="160" cy="100" rx="28" ry="7"/>
+      <g class="api-kedip">
+        <path class="art-api" d="M160 18 C176 38 182 56 170 76 C170 64 166 58 160 52 C154 62 146 68 150 80 C134 62 140 40 160 18 Z"/>
+        <path class="art-api-inti" d="M160 46 C166 56 166 64 160 76 C156 68 154 60 160 46 Z"/>
+      </g>
+    </svg>
+  </div>
+</section>
+<div class="strata" aria-hidden="true"></div>
+
+<section class="section" aria-labelledby="temukan-judul">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">{{halaman.beranda.temukan.eyebrow}}</p>
+      <h2 id="temukan-judul">{{halaman.beranda.temukan.judul}}</h2>
+      <p class="lead">{{halaman.beranda.temukan.lead}}</p>
+    </header>
+    <ul class="grid-kartu" role="list">
+      {{#each halaman.beranda.temukan.kartu}}
+      <li class="kartu-ikon">
+        <span class="kartu-ikon__ikon" aria-hidden="true"><svg><use href="{{asset:assets/icons/ikon.svg}}#ikon-{{this.ikon}}"/></svg></span>
+        <h3 class="kartu-ikon__judul">{{this.judul}}</h3>
+        <p class="kartu-ikon__teks">{{this.teks}}</p>
+      </li>
+      {{/each}}
+    </ul>
+    <p class="section-aksi">
+      <a class="tautan-panah" href="{{route:jelajahi}}">{{halaman.beranda.temukan.tombol}} <svg aria-hidden="true"><use href="{{asset:assets/icons/ikon.svg}}#ikon-panah"/></svg></a>
+    </p>
+  </div>
+</section>
+
+<section class="section section--gelap" aria-labelledby="video-judul">
+  <div class="container dua-kolom dua-kolom--tengah">
+    <div>
+      <p class="eyebrow eyebrow--aksen">{{halaman.beranda.video.eyebrow}}</p>
+      <h2 id="video-judul">{{halaman.beranda.video.judul}}</h2>
+      <p class="teks-redup">{{halaman.beranda.video.teks}}</p>
+    </div>
+    {{#if data.info.youtubeBeranda}}
+    <div class="embed embed--video" data-embed="youtube" data-id="{{data.info.youtubeBeranda}}" data-title="{{umum.embed.judulVideo}}">
+      <button class="embed__tombol" type="button">
+        <span class="embed__putar" aria-hidden="true"><svg><use href="{{asset:assets/icons/ikon.svg}}#ikon-putar"/></svg></span>
+        <span>{{umum.embed.putarVideo}}</span>
+      </button>
+      <p class="embed__catatan">{{umum.embed.catatanYoutube}}</p>
+    </div>
+    {{else}}
+    <div class="embed embed--video embed--kosong">
+      <span class="embed__putar" aria-hidden="true"><svg><use href="{{asset:assets/icons/ikon.svg}}#ikon-media"/></svg></span>
+      <p>{{umum.embed.videoBelum}}</p>
+    </div>
+    {{/if}}
+  </div>
+</section>
+
+<section class="section" aria-labelledby="kuota-judul">
+  <div class="container">
+    <div class="panel-kuota" id="status-kuota" data-kuota>
+      <span class="panel-kuota__ikon" aria-hidden="true"><svg><use href="{{asset:assets/icons/ikon.svg}}#ikon-kalender"/></svg></span>
+      <div>
+        <p class="eyebrow">{{halaman.beranda.kuota.eyebrow}}</p>
+        <h2 class="panel-kuota__judul" id="kuota-judul">{{halaman.beranda.kuota.judul}}</h2>
+        <p class="panel-kuota__teks" data-kuota-isi aria-live="polite">{{halaman.beranda.kuota.teks}}</p>
+      </div>
+      <a class="btn btn--utama" href="{{route:kunjungi#reservasi}}" data-track="klik_reservasi">{{halaman.beranda.kuota.tombol}}</a>
+    </div>
+  </div>
+</section>

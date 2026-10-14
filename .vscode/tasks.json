@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "detail": "Bangun halaman /id/ dan /en/ dari templates/ + content/",
+      "type": "shell",
+      "command": "node build.js",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Check",
+      "detail": "Validasi konten & template tanpa menulis file",
+      "type": "shell",
+      "command": "node build.js --check",
+      "group": "test",
+      "problemMatcher": []
+    }
+  ]
+}

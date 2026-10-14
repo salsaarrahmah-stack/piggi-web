@@ -1,0 +1,82 @@
+<section class="page-intro">
+  <div class="container">
+    <p class="eyebrow">{{halaman.kuis-galeri-agenda.intro.eyebrow}}</p>
+    <h1>{{halaman.kuis-galeri-agenda.intro.judul}}</h1>
+    <p class="lead">{{halaman.kuis-galeri-agenda.intro.lead}}</p>
+  </div>
+</section>
+
+<section class="section section--rapat" id="kuis" aria-labelledby="kuis-judul">
+  <div class="container">
+    <div class="panel-kuis">
+      <div>
+        <p class="eyebrow eyebrow--aksen">{{halaman.kuis-galeri-agenda.kuis.eyebrow}}</p>
+        <h2 id="kuis-judul">{{halaman.kuis-galeri-agenda.kuis.judul}}</h2>
+        <p class="teks-redup">{{halaman.kuis-galeri-agenda.kuis.teks}}</p>
+        <ul class="daftar-level" role="list">
+          {{#each halaman.kuis-galeri-agenda.kuis.level}}<li class="lencana lencana--level-{{@nomor}}">{{this}}</li>{{/each}}
+        </ul>
+      </div>
+      <div class="panel-kuis__aksi" data-kuis-wadah>
+        <span class="lencana lencana--terang">{{umum.segeraHadir}}</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="galeri" aria-labelledby="galeri-judul">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">{{halaman.kuis-galeri-agenda.galeri.eyebrow}}</p>
+      <h2 id="galeri-judul">{{halaman.kuis-galeri-agenda.galeri.judul}}</h2>
+      <p class="catatan-verifikasi">{{halaman.kuis-galeri-agenda.galeri.lead}}</p>
+    </header>
+    <ul class="galeri" role="list" data-galeri data-label-tutup="{{umum.dialog.tutup}}" data-label-sebelumnya="{{umum.dialog.sebelumnya}}" data-label-berikutnya="{{umum.dialog.berikutnya}}">
+      {{#each data.galeri.foto}}
+      <li class="galeri__item">
+        <figure>
+          <a class="galeri__tautan" href="{{aset:this.file}}" data-galeri-foto aria-label="{{halaman.kuis-galeri-agenda.galeri.perbesar}}: {{this.alt}}">
+            <img src="{{aset:this.file}}" alt="{{this.alt}}" width="800" height="600" loading="lazy" decoding="async">
+          </a>
+          <figcaption><span class="galeri__kategori">{{this.kategori}}</span> {{this.keterangan}}</figcaption>
+        </figure>
+      </li>
+      {{/each}}
+    </ul>
+
+    <div class="panel-ig">
+      <div>
+        <h3>{{halaman.kuis-galeri-agenda.instagram.judul}}</h3>
+        <p>{{halaman.kuis-galeri-agenda.instagram.teks}}</p>
+      </div>
+      {{#if data.info.instagram}}
+      <a class="btn btn--utama" href="https://www.instagram.com/{{data.info.instagram}}/" target="_blank" rel="noopener">{{halaman.kuis-galeri-agenda.instagram.tombol}}</a>
+      {{else}}
+      <p class="catatan-verifikasi">{{halaman.kuis-galeri-agenda.instagram.belumAda}}</p>
+      {{/if}}
+    </div>
+  </div>
+</section>
+
+<section class="section section--permukaan" id="agenda" aria-labelledby="agenda-judul">
+  <div class="container">
+    <header class="section-head">
+      <p class="eyebrow">{{halaman.kuis-galeri-agenda.agenda.eyebrow}}</p>
+      <h2 id="agenda-judul">{{halaman.kuis-galeri-agenda.agenda.judul}}</h2>
+    </header>
+    <ul class="agenda" role="list" data-agenda>
+      {{#each data.agenda.acara}}
+      <li class="agenda__item">
+        <time class="agenda__tanggal" datetime="{{this.tanggal}}">{{tgl:this.tanggal}}</time>
+        <div>
+          <h3 class="agenda__judul">{{this.judul}}</h3>
+          <p>{{this.deskripsi}}</p>
+          {{#if this.tautan}}<a href="{{this.tautan}}" target="_blank" rel="noopener">{{halaman.kuis-galeri-agenda.agenda.tautan}}</a>{{/if}}
+        </div>
+      </li>
+      {{else}}
+      <li class="agenda__kosong">{{halaman.kuis-galeri-agenda.agenda.kosong}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

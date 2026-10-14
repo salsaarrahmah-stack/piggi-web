@@ -1,0 +1,99 @@
+<section class="page-intro">
+  <div class="container">
+    <p class="eyebrow">{{halaman.kunjungi.intro.eyebrow}}</p>
+    <h1>{{halaman.kunjungi.intro.judul}}</h1>
+    <p class="lead">{{halaman.kunjungi.intro.lead}}</p>
+  </div>
+</section>
+
+<section class="section section--rapat" id="reservasi" aria-labelledby="reservasi-judul">
+  <div class="container">
+    <div class="panel-reservasi" data-reservasi>
+      <div class="panel-reservasi__kepala">
+        <p class="eyebrow">{{halaman.kunjungi.reservasi.eyebrow}}</p>
+        <h2 id="reservasi-judul">{{halaman.kunjungi.reservasi.judul}}</h2>
+        <p class="panel-reservasi__segera" role="status">{{halaman.kunjungi.reservasi.segera}}</p>
+        <a class="btn btn--utama" href="#" data-wa hidden target="_blank" rel="noopener">{{cta.wa}}</a>
+      </div>
+      <div>
+        <h3 class="judul-kecil">{{halaman.kunjungi.reservasi.langkahJudul}}</h3>
+        <ol class="langkah" role="list">
+          {{#each halaman.kunjungi.reservasi.langkah}}
+          <li class="langkah__item"><span class="langkah__nomor" aria-hidden="true">{{@nomor}}</span>{{this}}</li>
+          {{/each}}
+        </ol>
+        <p class="teks-kecil">{{halaman.kunjungi.reservasi.rombongan}} <a href="{{route:untuk-sekolah}}">{{halaman.kunjungi.reservasi.rombonganTombol}}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="lokasi-judul">
+  <div class="container dua-kolom">
+    <div class="info-kunjungan">
+      <div class="info-blok">
+        <h2 class="info-blok__judul" id="lokasi-judul"><svg aria-hidden="true"><use href="{{asset:assets/icons/ikon.svg}}#ikon-lokasi"/></svg>{{halaman.kunjungi.lokasi.judul}}</h2>
+        <p>{{data.info.alamat}}</p>
+        <p class="teks-kecil">{{data.info.jarak}}</p>
+      </div>
+      <div class="info-blok">
+        <h2 class="info-blok__judul"><svg aria-hidden="true"><use href="{{asset:assets/icons/ikon.svg}}#ikon-jam"/></svg>{{halaman.kunjungi.jam.judul}}</h2>
+        <dl class="daftar-jam">
+          {{#each data.info.jam}}<div><dt>{{this.hari}}</dt><dd>{{this.waktu}}</dd></div>{{/each}}
+        </dl>
+        <p class="teks-kecil">{{halaman.kunjungi.jam.catatan}}</p>
+      </div>
+      <div class="info-blok">
+        <h2 class="info-blok__judul"><svg aria-hidden="true"><use href="{{asset:assets/icons/ikon.svg}}#ikon-kontak"/></svg>{{halaman.kunjungi.kontak.judul}}</h2>
+        <ul class="daftar-kontak" role="list">
+          {{#if data.info.whatsapp}}<li><a href="https://wa.me/{{data.info.whatsapp}}" target="_blank" rel="noopener">{{halaman.kunjungi.kontak.whatsapp}}</a></li>{{/if}}
+          {{#if data.info.telepon}}<li>{{halaman.kunjungi.kontak.telepon}}: <a href="tel:{{data.info.telepon}}">{{data.info.telepon}}</a></li>{{/if}}
+          {{#if data.info.email}}<li>{{halaman.kunjungi.kontak.email}}: <a href="mailto:{{data.info.email}}">{{data.info.email}}</a></li>{{/if}}
+          {{#if data.info.instagram}}<li>{{halaman.kunjungi.kontak.instagram}}: <a href="https://www.instagram.com/{{data.info.instagram}}/" target="_blank" rel="noopener">@{{data.info.instagram}}</a></li>{{/if}}
+        </ul>
+        {{#unless data.info.whatsapp}}<p class="catatan-verifikasi">{{halaman.kunjungi.kontak.belumAda}}</p>{{/unless}}
+      </div>
+    </div>
+
+    <div class="peta-wadah">
+      <div class="embed embed--peta" data-embed="maps" data-q="{{data.info.mapsQuery}}" data-title="{{umum.embed.judulPeta}}">
+        <button class="embed__tombol" type="button">
+          <span class="embed__putar" aria-hidden="true"><svg><use href="{{asset:assets/icons/ikon.svg}}#ikon-lokasi"/></svg></span>
+          <span>{{umum.embed.tampilkanPeta}}</span>
+        </button>
+        <p class="embed__catatan">{{umum.embed.catatanMaps}}</p>
+      </div>
+      <a class="tautan-panah" href="https://www.google.com/maps/search/?api=1&amp;query={{uri:data.info.mapsQuery}}" target="_blank" rel="noopener" data-maps-link>{{umum.embed.bukaMaps}} <svg aria-hidden="true"><use href="{{asset:assets/icons/ikon.svg}}#ikon-panah"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--permukaan" aria-labelledby="faq-judul">
+  <div class="container dua-kolom dua-kolom--lebar-kiri">
+    <div>
+      <h2 id="faq-judul">{{halaman.kunjungi.faq.judul}}</h2>
+      <div class="faq">
+        {{#each halaman.kunjungi.faq.item}}
+        <details class="faq__item">
+          <summary class="faq__tanya">{{this.q}}</summary>
+          <p class="faq__jawab">{{this.a}}</p>
+        </details>
+        {{/each}}
+      </div>
+    </div>
+    <div>
+      <h2 id="aturan-judul">{{halaman.kunjungi.aturan.judul}}</h2>
+      <ul class="daftar-centang">
+        {{#each halaman.kunjungi.aturan.item}}<li>{{this}}</li>{{/each}}
+      </ul>
+      <p class="catatan-verifikasi">{{halaman.kunjungi.aturan.catatan}}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--rapat" id="privasi" aria-labelledby="privasi-judul">
+  <div class="container prosa">
+    <h2 id="privasi-judul">{{halaman.kunjungi.privasi.judul}}</h2>
+    {{#each halaman.kunjungi.privasi.paragraf}}<p>{{this}}</p>{{/each}}
+  </div>
+</section>

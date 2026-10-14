@@ -1,0 +1,85 @@
+{
+  "_catatan": "Peta lantai PIGGI. Jumlah lantai dibaca dari daftar ini (jangan di-hardcode di kode). Tiap lantai = satu bab cerita Ijen. 'pos' = pos Paspor Geolog/QR Jejak Ijen (dipakai fase 4).",
+  "_verifikasi": "Konsep tim magang hanya menyebut gedung 5 lantai dan isi lantai 2 (ruang pengenalan geologi, peta proyeksi, mini theatre, mikroskop foraminifera). Pembagian bab per lantai di bawah adalah CONTOH dan harus diganti sesuai kondisi asli PIGGI.",
+  "lantai": [
+    {
+      "nomor": 1,
+      "kode": "l1",
+      "bab": { "id": "Bab 1 · Pembentukan Ijen", "en": "Chapter 1 · How Ijen Formed" },
+      "ringkas": {
+        "id": "Dari proses tektonik, kaldera purba, sampai gunung api yang kita kenal sekarang.",
+        "en": "From tectonic processes and an ancient caldera to the volcano we know today."
+      },
+      "isi": [
+        { "id": "Video immersive tentang sejarah tektonik, kaldera Ijen, danau asam, dan api biru. [VERIFIKASI lokasi lantai]", "en": "An immersive video on tectonic history, the Ijen caldera, the acid lake, and the blue fire. [VERIFIKASI floor location]" },
+        { "id": "Isi lain di lantai ini. [ISI DARI PIGGI]", "en": "Other exhibits on this floor. [ISI DARI PIGGI]" }
+      ],
+      "pos": [
+        { "kode": "l1-p1", "nama": { "id": "Pos Kaldera (contoh)", "en": "Caldera Station (sample)" } },
+        { "kode": "l1-p2", "nama": { "id": "Pos Api Biru (contoh)", "en": "Blue Fire Station (sample)" } }
+      ]
+    },
+    {
+      "nomor": 2,
+      "kode": "l2",
+      "bab": { "id": "Bab 2 · Warisan Geologi", "en": "Chapter 2 · Geological Heritage" },
+      "ringkas": {
+        "id": "Mengenal batuan, fosil renik, dan cara para ahli membaca jejak sejarah bumi.",
+        "en": "Meet the rocks, microfossils, and how scientists read the traces of Earth's history."
+      },
+      "isi": [
+        { "id": "Ruang pengenalan geologi", "en": "Introduction to geology room" },
+        { "id": "Mikroskop untuk mengamati foraminifera", "en": "Microscopes for observing foraminifera" },
+        { "id": "Mini theatre: video singkat Geopark Ijen", "en": "Mini theatre: short films on Ijen Geopark" },
+        { "id": "Peta proyeksi situs budaya", "en": "Projection map of cultural sites" }
+      ],
+      "pos": [
+        { "kode": "l2-p1", "nama": { "id": "Pos Batuan (contoh)", "en": "Rock Station (sample)" } },
+        { "kode": "l2-p2", "nama": { "id": "Pos Mini Theatre (contoh)", "en": "Mini Theatre Station (sample)" } }
+      ]
+    },
+    {
+      "nomor": 3,
+      "kode": "l3",
+      "bab": { "id": "Bab 3 · Kehidupan", "en": "Chapter 3 · Life" },
+      "ringkas": {
+        "id": "Bagaimana kondisi geologi membentuk flora dan fauna di kawasan Ijen.",
+        "en": "How geology shapes the plants and animals of the Ijen area."
+      },
+      "isi": [
+        { "id": "Isi lantai 3. [ISI DARI PIGGI]", "en": "Floor 3 exhibits. [ISI DARI PIGGI]" }
+      ],
+      "pos": [
+        { "kode": "l3-p1", "nama": { "id": "Pos Pakis Purba (contoh)", "en": "Ancient Fern Station (sample)" } },
+        { "kode": "l3-p2", "nama": { "id": "Pos Hayati (contoh)", "en": "Biodiversity Station (sample)" } }
+      ]
+    },
+    {
+      "nomor": 4,
+      "kode": "l4",
+      "bab": { "id": "Bab 4 · Manusia & Budaya", "en": "Chapter 4 · People & Culture" },
+      "ringkas": {
+        "id": "Bagaimana lingkungan Ijen terhubung dengan kehidupan dan budaya masyarakatnya.",
+        "en": "How the Ijen landscape connects with the lives and culture of its people."
+      },
+      "isi": [
+        { "id": "Isi lantai 4. [ISI DARI PIGGI]", "en": "Floor 4 exhibits. [ISI DARI PIGGI]" }
+      ],
+      "pos": [
+        { "kode": "l4-p1", "nama": { "id": "Pos Budaya (contoh)", "en": "Culture Station (sample)" } },
+        { "kode": "l4-p2", "nama": { "id": "Pos Kopi Ijen (contoh)", "en": "Ijen Coffee Station (sample)" } }
+      ]
+    },
+    {
+      "nomor": 5,
+      "kode": "l5",
+      "bab": { "id": "Lantai 5", "en": "Floor 5" },
+      "ringkas": {
+        "id": "Fungsi dan isi lantai ini belum dikonfirmasi. [ISI DARI PIGGI]",
+        "en": "This floor's purpose and exhibits are not yet confirmed. [ISI DARI PIGGI]"
+      },
+      "isi": [],
+      "pos": []
+    }
+  ]
+}
